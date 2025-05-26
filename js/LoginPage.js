@@ -4,14 +4,46 @@ document.addEventListener('DOMContentLoaded', () => {
     const loginButton = document.getElementById('loginButton');
 
     loginButton.addEventListener('click', () => {
-        const name = nameInput.value;
+        const name = nameInput.value.trim();
         const password = passwordInput.value;
-        if (name && password) {
-            alert('Login successful! Redirecting to dashboard.');
-            window.location.href = 'Dashboard.html'; 
-        } else {
-            alert('Please enter your name and password.');
+
+        // Password validation regex
+        const uppercaseRegex = /[A-Z]/;
+        const numberRegex = /[0-9]/;
+        const specialCharRegex = /[!@#$%^&*(),.?":{}|<>]/;
+
+        if (!name) {
+            alert('Please enter your name.');
+            return;
         }
+
+        if (!password) {
+            alert('Please enter your password.');
+            return;
+        }
+
+        if (password.length < 6) {
+            alert('Password must be at least 6 characters long.');
+            return;
+        }
+
+        if (!uppercaseRegex.test(password)) {
+            alert('Password must contain at least one uppercase letter.');
+            return;
+        }
+
+        if (!numberRegex.test(password)) {
+            alert('Password must contain at least one number.');
+            return;
+        }
+
+        if (!specialCharRegex.test(password)) {
+            alert('Password must contain at least one special character.');
+            return;
+        }
+
+        alert('Login successful! Redirecting to dashboard.');
+        window.location.href = 'Dashboard.html';
     });
 });
 
