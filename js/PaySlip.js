@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', () => {
   const params = new URLSearchParams(window.location.search);
 
-  // Get values from URL
+
   const empName = params.get('employeeName') || '';
   const empId = params.get('employeeId') || '';
   const empRole = params.get('employeeRole') || '';
@@ -11,13 +11,11 @@ window.addEventListener('DOMContentLoaded', () => {
   const additions = params.get('additions') || '';
   const deductions = params.get('deductions') || '';
 
-  // Fill in the spans in your payslip page
   document.getElementById('empName').textContent = empName;
   document.getElementById('empId').textContent = empId;
   document.getElementById('empRole').textContent = empRole;
   document.getElementById('date').textContent = date;
 
-  // You can also fill the table body dynamically
   const payslipBody = document.getElementById('payslipBody');
   payslipBody.innerHTML = `
     <tr>
@@ -72,12 +70,12 @@ document.getElementById('downloadBtn').addEventListener('click', () => {
     const pdfWidth = pdf.internal.pageSize.getWidth();
     const pdfHeight = pdf.internal.pageSize.getHeight();
 
-    // Calculate image dimensions to fit width of PDF page
+
     const imgProps = pdf.getImageProperties(imgData);
-    const imgWidth = pdfWidth * 0.9; // 90% width for padding
+    const imgWidth = pdfWidth * 0.9;
     const imgHeight = (imgProps.height * imgWidth) / imgProps.width;
 
-    // Add image to PDF centered horizontally and with some top margin
+ 
     const x = (pdfWidth - imgWidth) / 2;
     const y = 20;
     pdf.addImage(imgData, 'PNG', x, y, imgWidth, imgHeight);

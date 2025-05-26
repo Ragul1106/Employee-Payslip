@@ -18,7 +18,6 @@ document.getElementById('payrollForm').addEventListener('submit', function(e) {
     return;
   }
 
-  // If all fields are filled, save and redirect
   const dataObj = Object.fromEntries(formData.entries());
   localStorage.setItem('payrollData', JSON.stringify(dataObj));
   window.location.href = 'PaySlip.html';
