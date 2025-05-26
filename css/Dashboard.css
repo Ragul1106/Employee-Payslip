@@ -341,12 +341,16 @@ body {
   width: 100%;
 }
 
+.topbar h2{
+  margin-bottom: 10px;
+  margin-left: 60px;
+}
 .topbar .greeting {
   font-size: 18px;
   margin-bottom: 8px;
 }
 
-/* Responsive flex container for icons (search, bell, profile) */
+
 .topbar .icons {
   display: flex;
   justify-content: space-between;
@@ -356,7 +360,7 @@ body {
   gap: 10px;
 }
 
-/* Responsive search bar */
+
 .search-bar {
   display: flex;
   border: 1px solid black;
@@ -383,7 +387,6 @@ body {
   cursor: pointer;
 }
 
-/* Icons and profile pic */
 .icon {
   width: 24px;
   height: 24px;
@@ -419,11 +422,12 @@ body {
 
   
   .calendar-header span {
+    margin-left: 10px;
     font-size: 14px;
   }
 
   .calendar-header img {
-    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .meetings-section {
