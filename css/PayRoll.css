@@ -143,7 +143,6 @@ body {
   color: white;
   padding: 10px 40px;
   border: none;
-  margin-left: 30px;
   border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
@@ -193,6 +192,9 @@ body {
     align-items: flex-start;
   }
 
+  .header-buttons {
+    margin-left: 25px;
+  }
   .form-grid {
     grid-template-columns: 1fr;
     gap: 16px;
@@ -214,5 +216,6 @@ body {
 
   .form-buttons a {
     width: 100%;
+    text-align: center;
   }
 }
