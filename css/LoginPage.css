@@ -52,6 +52,7 @@ html, body {
   font-size: 36px;
   margin-bottom: 40px;
   align-self: center;
+  margin-right: 120px;
   color: #000;
 }
 
@@ -183,6 +184,7 @@ html, body {
 
   .login-right h2 {
     font-size: 28px;
+    margin-left: 120px;
     margin-bottom: 20px;
   }
 
