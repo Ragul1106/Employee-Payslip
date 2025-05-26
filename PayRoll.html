@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Payroll Details</title>
+  <link rel="stylesheet" href="css/PayRoll.css">
+</head>
+<body>
+  <div class="app">
+   <aside class="sidebar">
+      <ul>
+        <li > <img src="assets/Overview.png" alt=""><a href="Dashboard.html">Overview</a></li>
+        <li class="active"> <img src="assets/Payroll.png" alt="">Payroll</li>
+        <li> <img src="assets/Payroll.png" alt=""><a href="PaySlip.html">PaySlip</a></li>
+      </ul>
+    </aside>
+
+    <main class="content">
+      <div class="header">
+        <h1>Payroll Details</h1>
+        <div class="header-buttons">
+          <button class="month-btn" disabled>This Month 📅</button>
+          <button class="download-btn" disabled>Download</button>
+        </div>
+      </div>
+
+      <form class="payroll-form" id="payrollForm">
+        <div class="form-grid">
+          <div>
+            <label>Employee Name</label>
+            <input type="text" name="employeeName">
+          </div>
+          <div>
+            <label>Employee Role</label>
+            <input type="text" name="employeeRole">
+          </div>
+          <div>
+            <label>Employee ID</label>
+            <input type="text" name="employeeId">
+          </div>
+
+          <div>
+            <label>Date</label>
+            <input type="date" name="date">
+          </div>
+          <div>
+            <label>Basic Salary</label>
+            <input type="number" name="basicSalary">
+          </div>
+          <div>
+            <label>Total Salary</label>
+            <input type="number" name="totalSalary">
+          </div>
+
+          <div>
+            <label>No of Working Days</label>
+            <input type="number" name="workingDays">
+          </div>
+          <div>
+            <label>Total Present Days</label>
+            <input type="number" name="presentDays">
+          </div>
+          <div>
+            <label>Total Leave Days</label>
+            <input type="number" name="leaveDays">
+          </div>
+
+          <div>
+            <label>Additions</label>
+            <input type="number" name="additions">
+          </div>
+          <div>
+            <label>Deductions</label>
+            <input type="number" name="deductions">
+          </div>
+        </div>
+
+        <div class="form-buttons">
+          <button type="submit" class="submit-btn">Submit Payroll</button>
+          <button type="reset" class="cancel-btn"> <a href="Dashboard.html"> Cancel</a></button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <script src="js/PayRoll.js"></script>
+</body>
+</html>

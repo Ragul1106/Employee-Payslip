@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payslip Details</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <link rel="stylesheet" href="css/PaySlip.css" />
+</head>
+<body>
+  <div class="app" >
+     <aside class="sidebar">
+      <ul>
+        <li > <img src="assets/Overview.png" alt=""><a href="Dashboard.html">Overview</a></li>
+        <li> <img src="assets/Payroll.png" alt=""><a href="PayRoll.html">PayRoll</a></li>
+        <li class="active"> <img src="assets/Payroll.png" alt="">Payslip</li>
+      </ul>
+    </aside>
+
+    <main class="content">
+      <!-- <h1>Payslip Details</h1> -->
+
+      <div class="payslip-card">
+        <h1>Payslip Details</h1>
+        <div class="employee-info">
+          <div>
+            <p><strong>Employee Name</strong> : <span id="empName"></span></p>
+            <p><strong>Employee I’D</strong> : <span id="empId"></span></p>
+            <p><strong>Role</strong> : <span id="empRole"></span></p>
+          </div>
+          <div>
+            <p><strong>Date</strong> : <span id="date"></span></p>
+            <p><strong>Month</strong> : <span id="month"> June</span></p>
+          </div>
+        </div>
+
+        <table class="payslip-table">
+          <thead>
+            <tr>
+              <th colspan="2">Employee Details</th>
+              <th colspan="2">Earnings</th>
+              <th>Additions</th>
+              <th>Deductions</th>
+            </tr>
+            <tr>
+              <th>Employee I’d</th>
+              <th>Employee Name</th>
+              <th>Basic salary</th>
+              <th>Total Salary</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="payslipBody">
+          </tbody>
+        </table>
+
+        <div class="total">
+          Total Earnings: ₹ <span id="totalEarnings"></span>
+        </div>
+         <div class="form-buttons">
+          <button type="submit" class="submit-btn"> <a href="Dashboard.html"> Save</a></button>
+          <button type="button" id="downloadBtn" class="cancel-btn">Download</button>
+
+
+        </div>
+      </div>
+      
+    </main>
+  </div>
+
+  <script src="js/PaySlip.js"></script>
+</body>
+</html>

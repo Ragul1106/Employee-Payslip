@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="css/LoginPage.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-left">
+        <img src="assets/loginLogo.gif" alt="Illustration" />
+      </div>
+      <div class="login-right">
+        <h2>Login</h2>
+
+        <div class="input-group">
+          <img src="assets/mail.png" alt="mail" class="icon-left" />
+          <input type="text" placeholder="Enter your Name" id="nameInput" />
+        </div>
+
+        <div class="input-group">
+          <img src="assets/Password.png" alt="lock" class="icon-left" />
+          <input type="password" placeholder="Password" id="passwordInput" />
+          <img
+            src="assets/hide.png"
+            alt="hide"
+            class="icon-right"
+            id="togglePassword"
+            onclick="togglePasswordVisibility()"
+            style="cursor: pointer"
+          />
+        </div>
+
+        <div class="forgot-password">
+          <a href="#">Forgot Password?</a>
+        </div>
+
+        <button class="login-btn" id="loginButton">Login</button>
+      </div>
+    </div>
+
+    <script src="js/LoginPage.js"></script>
+  </body>
+</html>
